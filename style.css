@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Museo Sans 900';
+    src: url('../fonts/MuseoSansCyrl-900.eot');
+    src: url('../fonts/MuseoSansCyrl-900.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl-900.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl-900.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'CoreRhino85Black';
+    src: url('../fonts/CoreRhino85Black.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Museo Sans 500';
+    src: url('../fonts/MuseoSansCyrl-500.eot');
+    src: url('../fonts/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl-500.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl-500.ttf') format('truetype');
+  }
+#header {
+    background: url(../img/head.jpg);
+    font-size: 16px;
+    line-height: 25px;
+    color: #363636;
+    font-family: 'Museo Sans 900';
+    padding-bottom: 30px;
+    padding-top: 15px;
+  }
+  .logo {
+    font-family: 'CoreRhino85Black';
+    font-size: 48px;
+    line-height: 30px;
+    color: #810909;
+  }
+.topnav ul {
+    width: 100%;
+  }
+  .topnav ul li {
+    float: none;
+    display: inline-block;
+  }
+  .topnav ul a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #350202;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 35px;
+  }
+  /* Стили для information блока  */
+.information {
+  margin-bottom: 30px;
+}
+.map span{
+  position: relative;
+  padding-left: 20px
+}
+.map span::before{
+  content: "";
+  background: url(../img/map.jpg);
+  position: absolute;
+  width: 14px;
+  height: 20px;
+  left: 0px;
+  }
+  .phone span{
+    position: relative;
+    padding-left: 16px
+  }
+  .phone span::before{
+    content: "";
+    background: url(../img/phone.jpg);
+    position: absolute;
+    width: 16px;
+    height: 22px;
+    left: -9px;
+    top: -2px;
+  }
+  .center-img{
+    display: inline-block;
+    margin: 0 auto;
+  }
