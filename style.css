@@ -1,35 +1,35 @@
  /*Шрифты*/
  @font-face {
   font-family:Myriad; /* Имя шрифта */
-  src: url(../font/MyriadProBlackSemiExtended.ttf) format('truetype'); /* Путь к файлу со шрифтом */
+  src: url(font/MyriadProBlackSemiExtended.ttf) format('truetype'); /* Путь к файлу со шрифтом */
   font-weight: normal;
 
 font-style: normal;
  }
 @font-face {
   font-family:CoreRhino45Regular; /* Имя шрифта */
-  src: url(../font/CoreRhino45Regular.otf) format("opentype"); /* Путь к файлу со шрифтом */
+  src: url(font/CoreRhino45Regular.otf) format("opentype"); /* Путь к файлу со шрифтом */
   font-weight: normal;
 
 font-style: normal;
  }
  @font-face {
   font-family:Coreriho65bold; /* Имя шрифта */
-  src: url(../font/Coreriho65bold.ttf) format("truetype"); /* Путь к файлу со шрифтом */
+  src: url(font/Coreriho65bold.ttf) format("truetype"); /* Путь к файлу со шрифтом */
   font-weight: normal;
 
 font-style: normal;
  }
  @font-face {
   font-family:NautilusPompilius; /* Имя шрифта */
-  src: url(../font/NautilusPompilius.otf) format("opentype"); /* Путь к файлу со шрифтом */
+  src: url(font/NautilusPompilius.otf) format("opentype"); /* Путь к файлу со шрифтом */
   font-weight: normal;
 
 font-style: normal;
  }
     @font-face {
   font-family:CoreRhino35Light; /* Имя шрифта */
-  src: url(../font/CoreRhino35Light.otf) format("opentype"); /* Путь к файлу со шрифтом */
+  src: url(font/CoreRhino35Light.otf) format("opentype"); /* Путь к файлу со шрифтом */
   font-weight: normal;
 
 font-style: normal;
@@ -37,32 +37,39 @@ font-style: normal;
 
 @font-face {
   font-family:MyriadPro-Bold; /* Имя шрифта */
-  src: url(../font/MyriadPro-Bold.otf) format("opentype"); /* Путь к файлу со шрифтом */
+  src: url(font/MyriadPro-Bold.otf) format("opentype"); /* Путь к файлу со шрифтом */
   font-weight: normal;
 font-style: normal;
  }
  @font-face {
   font-family:MyriadPro-Regular; /* Имя шрифта */
-  src: url(../font/MyriadPro-Regular.otf) format("opentype"); /* Путь к файлу со шрифтом */
+  src: url(font/MyriadPro-Regular.otf) format("opentype"); /* Путь к файлу со шрифтом */
   font-weight: normal;
 font-style: normal;
  }
   @font-face {
   font-family:Segoe_ui_bold; /* Имя шрифта */
-  src: url(../font/Segoe_ui_bold.ttf) format("truetype"); /* Путь к файлу со шрифтом */
+  src: url(font/Segoe_ui_bold.ttf) format("truetype"); /* Путь к файлу со шрифтом */
   font-weight: normal;
 font-style: normal;
  }
   @font-face {
   font-family:MyriadPro-Semibold; /* Имя шрифта */
-  src: url(../font/MyriadPro-Semibold.otf) format("opentype"); /* Путь к файлу со шрифтом */
+  src: url(font/MyriadPro-Semibold.otf) format("opentype"); /* Путь к файлу со шрифтом */
   font-weight: normal;
 font-style: normal;
  }
 
+@font-face {
+font-family:Roboto_Regular; /* Имя шрифта */
+src: url(../font/Roboto_Regular.ttf) format("opentype"); /* Путь к файлу со шрифтом */
+font-weight: normal;
+font-style: normal;
+}
+
   body
 {
-	background: url(img/head.png) repeat;
+	background: url(img/head.jpg) repeat;
 	background-size: 200px;
 	background-clip: padding-box;
 	background-position: center;
@@ -81,6 +88,7 @@ font-style: normal;
     font-size: 60px;
     color: #864729;
     margin-bottom: 0px;
+    margin: 25px;
   }
 .topnav ul {
     width: 100%;
@@ -98,38 +106,67 @@ font-style: normal;
     padding: 15px 35px;
   }
   /* Стили для information блока  */
-.information {
-  margin-bottom: 30px;
-}
-.map span{
-  position: relative;
-  padding-left: 20px
-}
-.map span::before{
-  content: "";
-  background: url(../img/map.jpg);
-  position: absolute;
-  width: 14px;
-  height: 20px;
-  left: 0px;
+  .logo-text
+  {
+    margin-top: 10px;
+    font-family: CoreRhino45Regular;
+    color: #864729;
+    font-size: 20px;
+    text-align: center;
   }
-  .phone span{
-    position: relative;
-    padding-left: 16px
+  
+  .phone
+  {
+  font-family: CoreRhino35Light;
+  font-size: 18px;
+  color: #864729;
+  margin-bottom: 0px;
   }
-  .phone span::before{
-    content: "";
-    background: url(../img/phone.jpg);
+  
+  .phone-wrap
+  {
+    align-items:center;
+    padding-top: 25px;
+  }
+  
+  .phone:first-child:before
+  {
+    content: url(img/phone.jpg);
     position: absolute;
-    width: 16px;
-    height: 22px;
-    left: -9px;
-    top: -2px;
+    width: 10px;
+    height: 21px;
+    
+    transform: translateX(-25px);
+  
   }
+  .adres
+  {
+  font-family: CoreRhino35Light;
+  font-size: 14px;
+  color: #864729;
+  margin-bottom: 0px;	
+  }
+  
+  .adres:before
+  {
+    content: url(img/map.jpg);
+    position: absolute;
+    width: 10px;
+    height: 21px;
+    
+    transform: translateX(-25px);
+  
+  }
+  .adres-wrap
+  {
+    align-items:center;
+    padding-top: 25px;
+  }
+  
   
   .sidebar{
     position: relative;
-    background: url(../ussr/menu.png);
+    background: url(ussr/menu.png);
 
   }
     .titl_m
@@ -168,11 +205,12 @@ font-style: normal;
           background: linear-gradient(90deg,#874a31,#af795e);
           color:#ffffff;
           display: block;
-          border-radius: 10px;
-          
-        
+          border-radius: 10px;  
         }
-        
+        .menush a
+        {
+          color: #864729;
+        }
         .menu-active a, .menu-active a:hover, .menu-active a:link
         {
           color:#ffffff;
@@ -259,12 +297,187 @@ font-style: normal;
             font-family: MyriadPro-Regular;
             font-size: 14px;
           }
+          .content
+          {
+            
+    margin-top: 35px;
+
+          }
+
+          .menu-wrap
+          {
+            background-color: #f5f5f5;
+            height: 570px;
+	          margin-top: 40px;
+	
+	         color: #864729;
+	         box-shadow: 5px 8px 10px 0px rgba(0, 0, 0, 0.08);
+	         padding: 0px;
+          }
+
+          .white-back
+          {
+            background-color:white;
+            padding-bottom: 100px;
+          }
          
-  footer
+          footer
+          {
+            min-height: 110px;
+            width: 100%;
+          background-image: linear-gradient(-90deg,#864729,#8b4d2f);
+          
+          
+          }
+          .footer-menu 
+          {
+          list-style: none;
+          padding: 0;
+          margin-bottom:10px;
+          margin-top: 30px;
+          
+          
+          }
+          .footer-menu li
+          {
+          display: inline-block;
+          
+          }
+          .footer-menu li a
+          {
+            font-family: MyriadPro-Regular;
+          font-size: 14px;
+          color:#fff;
+          }
+          .footer-menu li a:link,.footer-menu li a:target,.footer-menu a:hover
+          {
+          color:#fff;
+          text-decoration: none;
+          
+          }
+          .footer-menu  li:first-child
+          {
+          margin-left: 0px;
+          margin-right: 10px;
+          }
+          .footer-menu  li
+          {
+          margin-left: 10px;
+          margin-right: 10px;
+          }
+          .footer-menu li+li:before
+          {
+          
+          content: "|";
+          color:#fff;
+          font-family: MyriadPro-Regular;
+          position: absolute;
+          transform: translateX(-15px);
+          }
+          .footer-menu-text
+          {
+          font-size: 14px;
+          color:#fff;
+          font-family: MyriadPro-Regular;
+          }
+          .footer-logo
+          {
+            content: url(img/logo.png);
+            transform: translateX(100%);
+            margin-bottom: 10px;
+          
+          }
+          
+          .footer-text
+          {
+            font-family: Roboto_Regular;
+            font-size: 12px;
+            color:#fff;
+            float:right;
+          }
+          .footer-logo-wrap
+          {
+            margin-top: 20px;
+          
+          }
+          .uppercase
+          {
+            text-transform: uppercase;
+          }
+
+@media  (max-width:1150px)
 {
-	height: 110px;
-	width: 100%;
-background-image: linear-gradient(-90deg,#864729,#8b4d2f);
+  .logo {
+   
+    font-size: 40px;
+   
+}
+.footer-logo {
+  transform: translateX(250%);
+}
+.footer-text{
+  margin-right: -70px;
+}
 
+}
 
+@media  (max-width:800px)
+{
+  .logo {
+   
+    font-size: 50px;
+    text-align: center;
+   
+}
+.logo-text {
+  
+  font-size: 15px;
+  
+}
+.phone-wrap{
+  text-align: center;
+}
+.adres-wrap{
+text-align: center; 
+}
+.footer-menu-wrap
+{
+text-align: center;
+}
+.footer-text{
+  margin-right: 290px;
+}
+
+}
+@media  (max-width:450px)
+{
+  .phone-wrap{
+    text-align: center;
+  }
+.adres-wrap{
+  text-align: center; 
+}
+.footer-menu-wrap
+{
+text-align: center;
+}
+.footer-logo {
+  transform: translateX(90%);
+}
+.footer-text{
+  margin-right: 120px;
+}
+}
+@media  (max-width:350px)
+{
+  .logo {
+   
+    font-size: 35px;
+  }
+  .footer-logo {
+    transform: translateX(70%);
+  }
+  .footer-text{
+    margin-right: 50px;
+  }  
 }
